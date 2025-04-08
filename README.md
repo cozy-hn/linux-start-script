@@ -46,13 +46,16 @@ chmod +x scripts/*.sh
 # Install unzip utility
 ./scripts/install_unzip.sh
 
+# Install aria2 download manager
+./scripts/install_aria2.sh
+
 # Disable SSH password authentication (key-based login only)
 # WARNING: Run this ONLY after adding your SSH key to the server!
-sudo ./scripts/secure_ssh.sh
+./scripts/secure_ssh.sh
 
 # Set lower swappiness (default: 10, uses memory more, swaps less)
 # You can specify a custom value: sudo ./scripts/set_swappiness.sh 20
-sudo ./scripts/set_swappiness.sh
+./scripts/set_swappiness.sh
 ```
 
 ## Performance Optimization
