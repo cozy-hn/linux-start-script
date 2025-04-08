@@ -49,13 +49,16 @@ chmod +x scripts/*.sh
 # Install aria2 download manager
 ./scripts/install_aria2.sh
 
+# Install Ookla Speedtest CLI
+./scripts/install_speedtest.sh
+
 # Disable SSH password authentication (key-based login only)
 # WARNING: Run this ONLY after adding your SSH key to the server!
-./scripts/secure_ssh.sh
+sudo ./scripts/secure_ssh.sh
 
 # Set lower swappiness (default: 10, uses memory more, swaps less)
 # You can specify a custom value: sudo ./scripts/set_swappiness.sh 20
-./scripts/set_swappiness.sh
+sudo ./scripts/set_swappiness.sh
 ```
 
 ## Performance Optimization
