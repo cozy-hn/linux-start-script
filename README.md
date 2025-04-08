@@ -52,6 +52,9 @@ chmod +x scripts/*.sh
 # Install aria2 download manager
 ./scripts/install_aria2.sh
 
+# Install LZ4 compression tools
+./scripts/install_lz4.sh
+
 # Install Ookla Speedtest CLI
 ./scripts/install_speedtest.sh
 
