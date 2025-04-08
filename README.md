@@ -40,6 +40,9 @@ chmod +x scripts/*.sh
 # Install htop (system monitoring tool)
 ./scripts/install_monitoring.sh
 
+# Install iotop (I/O monitoring tool)
+./scripts/install_iotop.sh
+
 # Install tmux (terminal multiplexer)
 ./scripts/install_tmux.sh
 
