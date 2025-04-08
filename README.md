@@ -43,6 +43,9 @@ chmod +x scripts/*.sh
 # Install tmux (terminal multiplexer)
 ./scripts/install_tmux.sh
 
+# Install unzip utility
+./scripts/install_unzip.sh
+
 # Disable SSH password authentication (key-based login only)
 # WARNING: Run this ONLY after adding your SSH key to the server!
 sudo ./scripts/secure_ssh.sh
