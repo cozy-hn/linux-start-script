@@ -55,6 +55,9 @@ chmod +x scripts/*.sh
 # Install LZ4 compression tools
 ./scripts/install_lz4.sh
 
+# Install jq (JSON processor)
+./scripts/install_jq.sh
+
 # Install Ookla Speedtest CLI
 ./scripts/install_speedtest.sh
 
