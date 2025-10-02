@@ -20,7 +20,14 @@ sed -i 's/#PubkeyAuthentication yes/PubkeyAuthentication yes/' /etc/ssh/sshd_con
 
 # Restart SSH service
 if [ -f /bin/systemctl ] || [ -f /usr/bin/systemctl ]; then
-    systemctl restart sshd
+    # Try sshd first, then ssh
+    if systemctl is-active --quiet sshd 2>/dev/null; then
+        systemctl restart sshd
+    elif systemctl is-active --quiet ssh 2>/dev/null; then
+        systemctl restart ssh
+    else
+        echo "Could not find sshd or ssh service. Please restart SSH manually."
+    fi
 elif [ -f /etc/init.d/sshd ]; then
     /etc/init.d/sshd restart
 elif [ -f /etc/init.d/ssh ]; then
