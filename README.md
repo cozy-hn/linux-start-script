@@ -58,6 +58,9 @@ chmod +x scripts/*.sh
 # Install jq (JSON processor)
 ./scripts/install_jq.sh
 
+# Install Docker (container platform)
+sudo ./scripts/install_docker.sh
+
 # Install Ookla Speedtest CLI
 ./scripts/install_speedtest.sh
 
